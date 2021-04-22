@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="center">
+   
+    @using (Html.BeginForm("Info", "Kitchens", FormMethod.Post))
+    {
+        <label class="labelclass" for="datoInput">Vælg en dato</label>
+        <input type="date" name="datoInput" id="datoInput" />
+        <input type="submit" value="Vis Info" />
+    }
+</div>
