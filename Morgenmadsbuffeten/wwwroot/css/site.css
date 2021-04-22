@@ -1,10 +1,17 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
@@ -68,4 +75,170 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+/* Home Index Buttons */
+
+a.button5 {
+    display: inline-block;
+    padding: 0.60em 2.5em;
+    border: 0.15em solid #000000;
+    margin: 0 0.4em 0.4em 0;
+    border-radius: 0.24em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 900;
+    border-radius: 1em;
+    color: #000000;
+    text-shadow: 0 0.08em 0.08em rgba(0,0,0,0.35);
+    background-color: #FFFFFF;
+    text-align: center;
+    transition: all 0.15s;
+}
+
+a.button5:hover {
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+@media all and (max-width:30em) {
+    a.button5 {
+        display: block;
+        margin: 0.4em auto;
+         
+    }
+}
+
+container {
+    text-align: center;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40em;
+    border: 0px;
+}
+
+.center2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
+    border: 0px;
+}
+
+
+
+.bouncy {
+    animation: bouncy 5s infinite linear;
+    position: relative;
+}
+
+@keyframes bouncy {
+    0% {
+        top: 0em
+    }
+
+    40% {
+        top: 0em
+    }
+
+    43% {
+        top: -0.9em
+    }
+
+    46% {
+        top: 0em
+    }
+
+    48% {
+        top: -0.4em
+    }
+
+    50% {
+        top: 0em
+    }
+
+    100% {
+        top: 0em;
+    }
+}
+
+a.button1 {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.18em solid #FC5B30;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.36em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 600;
+    color: #FC5B30;
+    text-shadow: 0 0 0.1em #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+    a.button1:hover {
+        color: #FFFFFF;
+        background-color: #FC5B30;
+    }
+
+@media all and (max-width:30em) {
+    a.button1 {
+        display: block;
+        margin: 0.4em auto;
+         
+    }
+}
+
+input[type=submit] {
+    padding: 0.1em 0.5em;
+    border: 0.10em solid white;
+    border-radius: 0.7em;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 0 0.08em 0.08em rgba(0,0,0,0.35);
+    text-align: center;
+    background: transparent;
+}
+
+input[type=submit]:hover {
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+@media all and (max-width:30em) {
+    input[type=submit] {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+.labelclass {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-shadow: 0 0.08em 0.08em rgba(0,0,0,0.35);
+    text-align: center;
+    color: white;
+}
+
+.table {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-shadow: 0 0.08em 0.08em rgba(0,0,0,0.35);
+    text-align: center;
+    color: white;
 }

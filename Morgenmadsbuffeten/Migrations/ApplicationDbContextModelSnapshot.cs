@@ -3,17 +3,15 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Morgenmadsbuffeten.Data;
 
-namespace Morgenmadsbuffeten.Data.Migrations
+namespace Morgenmadsbuffeten.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210419081537_newschema2")]
-    partial class newschema2
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -254,6 +252,9 @@ namespace Morgenmadsbuffeten.Data.Migrations
 
                     b.Property<int>("AmountChildren")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("DateRightNow")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("RoomNumber")
                         .HasColumnType("int");

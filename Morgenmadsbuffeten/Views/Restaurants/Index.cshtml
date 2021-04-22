@@ -4,44 +4,43 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<label class="labelclass" style="font-size:4em">Restaurant</label>
+<br/>
+<a asp-action="Create">
+    <input type="submit" value="Opret ny" />
+</a>
+<br/>
+<br/>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.RoomNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AmountAdults)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AmountChildren)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.RoomNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AmountAdults)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AmountChildren)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.RestaurantId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.RestaurantId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.RestaurantId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <table class="table" style="font-size:1.5em">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RoomNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AmountAdults)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AmountChildren)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RoomNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AmountAdults)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AmountChildren)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

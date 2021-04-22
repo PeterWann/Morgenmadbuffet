@@ -22,6 +22,11 @@ namespace Morgenmadsbuffeten.Controllers
         // GET: Receptions
         public async Task<IActionResult> Index()
         {
+            return View();
+        }
+
+        public async Task<IActionResult> Info()
+        {
             return View(await _context.Restaurants.ToListAsync());
         }
 

@@ -31,13 +31,18 @@
     notCheckedInAdults = amountOfAdults - amountAdultRestaurant;
     notCheckedInChildren = amountOfChildren - amountChildrenRestaurant;
 }
-<h1>Køkkenet</h1>
+<label class="labelclass" style="font-size:4em">Køkken</label>
+@using (Html.BeginForm("Info", "Kitchens", FormMethod.Post))
+{
+    <input type="hidden" name="datoInput" value="@ViewBag.Dato.ToString("dd/MM/yyyy")" />
+    <input type="submit" value="Refresh"/>
+}
 <br />
-<h2>Dato: @ViewBag.Dato.ToString("dd/MM/yyyy")</h2>
+<label class="labelclass" style="font-size:1.8em">Dato: @ViewBag.Dato.ToString("dd/MM/yyyy")</label>
 <br />
-<h3>Forventet antal gæster</h3>
+<label class="labelclass" style="font-size:2em">Forventet antal gæster:</label>
 
-<table class="table">
+<table class="table" style="font-size:1em">
     <thead>
         <tr>
             <th>
@@ -68,8 +73,7 @@
     </tbody>
 </table>
 <br />
-<br />
-<h3>Antal gæster tjekket ind</h3>
+<label class="labelclass" style="font-size:2em">Antal gæster tjekket ind:</label>
 <table class="table">
     <thead>
         <tr>
@@ -95,8 +99,7 @@
     </tbody>
 </table>
 <br />
-<br />
-<h3>Antal gæster <u>ikke</u> tjekket ind</h3>
+<label class="labelclass" style="font-size:2em">Antal gæster <u>ikke</u> tjekket ind:</label>
 <table class="table">
     <thead>
         <tr>
@@ -113,17 +116,17 @@
         </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>
-            @notCheckedInAdults
-        </td>
-        <td>
-            @notCheckedInChildren
-        </td>
-        <td>
-            @notCheckedIn
-        </td>
+        <tr>
+            <td>
+                @notCheckedInAdults
+            </td>
+            <td>
+                @notCheckedInChildren
+            </td>
+            <td>
+                @notCheckedIn
+            </td>
 
-    </tr>
+        </tr>
     </tbody>
 </table>

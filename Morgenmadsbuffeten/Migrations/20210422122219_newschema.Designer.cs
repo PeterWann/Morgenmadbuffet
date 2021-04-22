@@ -7,19 +7,19 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Morgenmadsbuffeten.Data;
 
-namespace Morgenmadsbuffeten.Data.Migrations
+namespace Morgenmadsbuffeten.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210419064601_initialschema")]
-    partial class initialschema
+    [Migration("20210422122219_newschema")]
+    partial class newschema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.2");
+                .HasAnnotation("ProductVersion", "5.0.4")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -53,7 +53,7 @@ namespace Morgenmadsbuffeten.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -142,7 +142,7 @@ namespace Morgenmadsbuffeten.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -219,6 +219,51 @@ namespace Morgenmadsbuffeten.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Morgenmadsbuffeten.Models.Reception", b =>
+                {
+                    b.Property<int>("ReceptionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AdultAmounts")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CheckInDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ChildrenAmount")
+                        .HasColumnType("int");
+
+                    b.HasKey("ReceptionId");
+
+                    b.ToTable("Receptions");
+                });
+
+            modelBuilder.Entity("Morgenmadsbuffeten.Models.Restaurant", b =>
+                {
+                    b.Property<int>("RestaurantId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AmountAdults")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AmountChildren")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateRightNow")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RoomNumber")
+                        .HasColumnType("int");
+
+                    b.HasKey("RestaurantId");
+
+                    b.ToTable("Restaurants");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -54,10 +54,11 @@ namespace Morgenmadsbuffeten.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("RestaurantId,RoomNumber,AmountAdults,AmountChildren")] Restaurant restaurant)
+        public async Task<IActionResult> Create([Bind("RestaurantId,RoomNumber,AmountAdults,AmountChildren,DateRightNow")] Restaurant restaurant)
         {
             if (ModelState.IsValid)
             {
+                restaurant.DateRightNow = DateTime.Now;
                 _context.Add(restaurant);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

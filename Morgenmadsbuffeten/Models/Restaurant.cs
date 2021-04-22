@@ -23,5 +23,7 @@ namespace Morgenmadsbuffeten.Models
         [Required]
         [DisplayName("Antal Børn")]
         public int AmountChildren { get; set; }
+
+        public DateTime DateRightNow { get; set; }
     }
 }
