@@ -19,6 +19,7 @@ namespace Morgenmadsbuffeten.Controllers
             _context = context;
         }
 
+        [Authorize("IsKitchen")]
         public IActionResult Index()
         {
             return View();
