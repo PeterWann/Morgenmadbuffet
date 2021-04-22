@@ -21,6 +21,7 @@ namespace Morgenmadsbuffeten.Models
         public int ChildrenAmount { get; set; }
 
         [Required]
+        [DisplayName("Tjek ind dato")]
         public DateTime CheckInDate { get; set; }
         
     }
