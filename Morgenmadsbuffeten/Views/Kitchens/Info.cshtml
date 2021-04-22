@@ -1,0 +1,129 @@
+﻿@using Microsoft.IdentityModel.Protocols
+@using Microsoft.EntityFrameworkCore.Infrastructure
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model Morgenmadsbuffeten.Models.ViewModel.Kitchen
+
+@{
+    ViewData["Title"] = "Info";
+
+    int amountOfChildren = 0;
+    int amountOfAdults = 0;
+    foreach (var a in Model.Receptions)
+    {
+        amountOfChildren += a.ChildrenAmount;
+        amountOfAdults += a.AdultAmounts;
+    }
+
+    var totalAmount = amountOfChildren + amountOfAdults;
+
+    int amountChildrenRestaurant = 0;
+    int amountAdultRestaurant = 0;
+    int notCheckedIn = 0;
+    int notCheckedInAdults = 0;
+    int notCheckedInChildren = 0;
+    foreach (var a in Model.Restaurants)
+    {
+        amountChildrenRestaurant += a.AmountChildren;
+        amountAdultRestaurant += a.AmountAdults;
+    }
+
+    notCheckedIn = totalAmount - (amountChildrenRestaurant + amountAdultRestaurant);
+    notCheckedInAdults = amountOfAdults - amountAdultRestaurant;
+    notCheckedInChildren = amountOfChildren - amountChildrenRestaurant;
+}
+<h1>Køkkenet</h1>
+<br />
+<h2>Dato: @ViewBag.Dato.ToString("dd/MM/yyyy")</h2>
+<br />
+<h3>Forventet antal gæster</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Receptions[0].AdultAmounts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Receptions[0].ChildrenAmount)
+            </th>
+            <th>
+                Total Antal
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @amountOfAdults
+            </td>
+            <td>
+                @amountOfChildren
+            </td>
+            <td>
+                @totalAmount
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<h3>Antal gæster tjekket ind</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurants[0].AmountAdults)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurants[0].AmountChildren)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @amountAdultRestaurant
+            </td>
+            <td>
+                @amountChildrenRestaurant
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<h3>Antal gæster <u>ikke</u> tjekket ind</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurants[0].AmountAdults)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurants[0].AmountChildren)
+            </th>
+            <th>
+                Total Antal
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            @notCheckedInAdults
+        </td>
+        <td>
+            @notCheckedInChildren
+        </td>
+        <td>
+            @notCheckedIn
+        </td>
+
+    </tr>
+    </tbody>
+</table>
