@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Morgenmadsbuffeten.Models.Restaurant>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<label class="labelclass" style="font-size:4em">Restaurant</label>
+<br/>
+<a asp-action="Create">
+    <input type="submit" value="Opret ny" />
+</a>
+<br/>
+<br/>
+
+    <table class="table" style="font-size:1.5em">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RoomNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AmountAdults)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AmountChildren)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RoomNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AmountAdults)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AmountChildren)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
