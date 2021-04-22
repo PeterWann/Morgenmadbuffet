@@ -7820,11 +7820,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj",
+      "projectUniqueName": "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj",
       "projectName": "Morgenmadsbuffeten",
-      "projectPath": "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj",
+      "projectPath": "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj",
       "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
-      "outputPath": "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadsbuffeten\\obj\\",
+      "outputPath": "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadbuffet\\Morgenmadsbuffeten\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
