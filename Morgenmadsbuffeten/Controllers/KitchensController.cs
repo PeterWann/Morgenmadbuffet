@@ -56,7 +56,10 @@ namespace Morgenmadsbuffeten.Controllers
 
             foreach (var r in _context.Restaurants)
             {
-                restaurant.Add(r);
+                if (r.DateRightNow.Date == datoInput.Date)
+                {
+                    restaurant.Add(r);
+                }
             }
 
             return restaurant;
