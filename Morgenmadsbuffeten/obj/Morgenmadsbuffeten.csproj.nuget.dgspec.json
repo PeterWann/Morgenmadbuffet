@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj": {}
+    "C:\\Users\\augus\\OneDrive - Aarhus Universitet\\4SEMESTER\\GUI\\Assignment2\\FinalMorgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj": {}
   },
   "projects": {
-    "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj": {
+    "C:\\Users\\augus\\OneDrive - Aarhus Universitet\\4SEMESTER\\GUI\\Assignment2\\FinalMorgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj",
+        "projectUniqueName": "C:\\Users\\augus\\OneDrive - Aarhus Universitet\\4SEMESTER\\GUI\\Assignment2\\FinalMorgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj",
         "projectName": "Morgenmadsbuffeten",
-        "projectPath": "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj",
-        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
-        "outputPath": "C:\\IKT\\GUI\\Morgenmadsbuffeten\\Morgenmadbuffet\\Morgenmadsbuffeten\\obj\\",
+        "projectPath": "C:\\Users\\augus\\OneDrive - Aarhus Universitet\\4SEMESTER\\GUI\\Assignment2\\FinalMorgenmadbuffet\\Morgenmadsbuffeten\\Morgenmadsbuffeten.csproj",
+        "packagesPath": "C:\\Users\\augus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\augus\\OneDrive - Aarhus Universitet\\4SEMESTER\\GUI\\Assignment2\\FinalMorgenmadbuffet\\Morgenmadsbuffeten\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\augus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
